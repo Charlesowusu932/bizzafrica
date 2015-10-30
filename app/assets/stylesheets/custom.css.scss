@@ -1,2 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+}
+
+.navbar-brand1 {
+    float: left;
+    /* padding: 15px 15px; */
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+}

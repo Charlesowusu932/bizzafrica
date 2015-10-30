@@ -15,3 +15,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+/*adding nav bar hover dropdown*/
+    $(function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
+    
+/*adding nav bar hover dropdown*/
+    
