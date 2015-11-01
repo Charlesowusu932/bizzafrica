@@ -188,3 +188,23 @@ a:hover, a:focus {
 .sli {
     margin-top:4em;
 }
+
+
+.navbar-default .navbar-toggle {
+    border-color: #C14040;
+     position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: rgb(193, 64, 64);
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius:     1px;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFFFFF;
+}
