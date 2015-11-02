@@ -73,6 +73,8 @@ body {
     padding-top:1.5em;
 }
 
+   
+
 .konko{
     padding-top:1em;
     padding-left:.5em;
@@ -85,8 +87,17 @@ body {
     padding-right: 2em;
 }
 
+.konko3 {
+  
+    padding-left: 1.5em;
+}
+
 .media-left, .media > .pull-left {
     padding-right: 1px;
+}
+
+.medias {
+    margin-top: 14px;
 }
 
 .foot{
@@ -207,4 +218,18 @@ a:hover, a:focus {
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #FFFFFF;
+}
+
+.catc {
+    color: #a94442;
+}
+
+.sidebar {
+    background-color:white;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 20px;
+    border-bottom: 1px solid #a94442;
 }
