@@ -5,9 +5,9 @@
         <div class="col-md-8">
           <h2><%= @post.title %></h2>
           <p class="catc"><small>Start Up | By KofiDesign</small></p>
-          <a href="#">
-            <img src="http://placehold.it/730x400" alt="">
-          </a>
+          <div class="show_post">
+            <%= image_tag(@post.picture.url, class: "img-responsive") if @post.picture? %>
+          </div>
           <p class="blog-post pad-top "><%= @post.description %></p>
 
          <!--comment box here-->
