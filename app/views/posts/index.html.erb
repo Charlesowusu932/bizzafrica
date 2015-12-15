@@ -1,17 +1,203 @@
+<!--carouse Stars here -->
+<div id="carousel-example-generic " class="carousel slide sli" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://pusaggh.org/images/gy.png" alt="...">
+      <div class="carousel-caption">
+       <h1>TOP FIVE LEADING STARTS UP IN GHANA</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, eius, accusantium, sint quas expedita aliquam in iste non harum asperiores ratione minus maiores rem dolor magni vitae aut reprehenderit nesciunt.</p>
+        <p><a href="#" class="btn btn-more btn-lg">Read More</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://pusaggh.org/images/yui.png" alt="...">
+      <div class="carousel-caption">
+       <h1>WHY MOST BUSINESS GET DISTRACTED IN THEIR INFANT STAGE </h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, eius, accusantium, sint quas expedita aliquam in iste non harum asperiores ratione minus maiores rem dolor magni vitae aut reprehenderit nesciunt.</p>
+        <p><a href="#" class="btn btn-more btn-lg">Read More</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--carouse ending here-->
+
+
+
+<!--Main Content which includes sidebar (sidebar down there)-->
 <div class="container">
-  <h1>All Posts</h1>
-   <div class="row">
-  <% @posts.each do |post| %>
+  <div class="row">
+  <div class="main-content">
+    <!--content starts hers-->
+  <div class="col-md-8 col-sm-8">
+    <!--Big Boxes starts here-->
+    <div class="row">
+    <% @posts.each do |post| %>
       <div class="col-md-6 col-sm-6">
-      <div class="thumbnail">
-        <%= image_tag(post.picture.url, class: "gravatar") if post.picture? %>
+        <div class="thumbnail">
+          <%= image_tag(post.picture.url, class: "gravatar") if post.picture? %>
           <div class="caption">
             <h3><%= link_to post.title, post_path(post) %></h3>
             <p class="catc"><small>Business | By KofiDesign</small></p>
             <p><%= post.summary %></p>
           </div>
+        </div>
       </div>
+      <% end %>
+      <!--Boxes ends here-->
+
+      <!--Small boxes starts here-->
+      <% @posts.each do |post| %>
+        <div class="col-md-6 col-sm-12">
+          <div class="thumbnail2">
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag(post.picture.url, size: "130x130") if post.picture? %>
+            </a>
+              </div>
+              <div class="media-body konko">
+                <h5 class="media-heading"><strong><%= link_to post.title, post_path(post) %></strong></h5>
+                 <p class="catc"><small>Business | By Ernest</small></p>
+                  <p><%= post.summary %></p>
+              </div>
+        </div>
+        </div>
+      </div>
+      <% end %>
+      <!--Small boxes ends here-->
+
+      <!--horizontal boxes strats here-->
+      <% @posts.each do |post| %>
+      <div class="col-md-12 col-sm-12">
+        <div class="thumbnail2">
+      <div class="media">
+        <div class="media-left hidden-xs hidden-sm">
+          <a href="#">
+            <%= image_tag(post.picture.url, size: "250x280") if post.picture? %>
+          </a>
+            </div>
+            <div class="media-body konko2">
+              <h3 class="media-heading"><%= link_to post.title, post_path(post) %></h3>
+               <p class="catc"><small>Business | By Aaron</small></p>
+               <p><%= post.summary %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+      <!--horizontal boxes ends here-->
     </div>
-  <% end %>
-   </div>
+  </div>
 </div>
+
+<!--content Ends here hers-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Side bar area here-->
+  <div class="col-md-4 col-sm-4 sidebar">
+  <div class="sidebar">
+   <h3 class="page-header">This Week Magazine</h3>
+    <a href="#">
+      <img class="img-responsive" src="http://pusaggh.org/images/mag1.jpg" alt="...">
+    </a>
+      <div class="col-md-12 col-sm-12">
+      <h3 class="page-header pad-top">Top Bizz</h3>
+      <% @posts.each do |post| %>
+      <div class="medias">
+        <div class="media-left hidden-sm">
+          <a href="#">
+            <%= image_tag(post.picture.url, size: "130x130") if post.picture? %>
+          </a>
+            </div>
+            <div class="media-body konko3">
+              <h5 class="media-heading"><strong><%= link_to post.title, post_path(post) %></strong></h5>
+               <p class="catc"><small>Social | By KofiDesign</small></p>
+                <p><%= post.summary %></p>
+            </div>
+        </div>
+      <% end %>
+      </div>
+
+
+      <div class="col-sm-12">
+        <h3 class=" pad-top"> <a href="#" class="btn btn-more"><i class="fa fa-bolt"></i> Trending Tech</a></h3>
+         <ul class="list-unstyled">
+         <% @posts.each do |post| %>
+          <li><h5><strong><%= link_to post.title, post_path(post) %></strong></h5></li>
+          <% end %>
+          </ul>
+          <hr>
+      </div>
+    <!--facebook plug area-->
+      <div class="col-sm-12 pad-top hidden-sm">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
+      </div>
+    <!--facebook plug area-->
+
+    <div class="col-sm-12 pad-top pad-down">
+        <a href="#">
+          <img class="img-responsive" src="http://pusaggh.org/images/mag1.jpg" alt="...">
+          </a>
+      </div>
+  </div>
+</div>
+  <!--Side bar area ending  here-->
+
+<!--Main Content which includes sidebar  (sidebar down there) Ends here-->
+
+<!--Added it because of the facebook page on the site-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=175969142740879";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--Added it because of the facebook page on the site-->
