@@ -250,9 +250,6 @@ a:hover, a:focus {
 //     clear: right;
 // }
 
-p {
-    margin: 0px 0 0px;
-}
 
 /*added by @kofidesign*/
 #wrapper {
@@ -462,6 +459,14 @@ ul.alert-dropdown {
 
 .panel-yellow > a:hover {
     color: #df8a13;
+}
+
+.writer {
+    background-image: url(http://pusaggh.org/images/yui.png);
+    padding-top: 5em;
+    background-color: #504D4D;
+    padding-bottom: 5em;
+    color: white;
 }
 /*added by @kofidesign*/
 
