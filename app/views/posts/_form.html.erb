@@ -14,7 +14,6 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-               
                 <!---->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Admin <b class="caret"></b></a>
@@ -41,7 +40,7 @@
                     <li>
                         <a href="#"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-            
+
                     <li class="active">
                         <a href="#"><i class="fa fa-fw fa-edit"></i>Post</a>
                     </li>
@@ -57,7 +56,7 @@
                     <li>
                         <a href="#"><i class="fa fa-fw fa-globe"></i> Go to Main Site</a>
                     </li>
-                    
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -89,7 +88,7 @@
                     <div class="col-lg-6">
 
                         <form role="form">
-                          
+
                           <!--hello-->
                           <%= render "shared/errors", obj: @post %>
 
@@ -119,21 +118,21 @@
                               <%= f.label :description %>
                               <%= f.text_area :description, class: "form-control" %>
                             </div>
-                          
+
                             <div class="form-group">
                               <%= f.file_field :picture, accept: 'image/jpeg,image/jpg,image/gif,image/png' %>
                             </div>
-                          
+
                             <div>
                               <%= f.submit(@post.new_record? ? "Create Post" : "Update Post", class: "btn btn-primary") %>
                             </div>
                           <% end %>
                           <!--hello-->
-      
+
                         </form>
 
                     </div>
-                    
+
                 </div>
                 <!-- /.row -->
 
