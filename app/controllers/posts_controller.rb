@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :update, :show]
+
   def index
     @posts = Post.all
   end
@@ -19,11 +21,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success] = "Your post was updated successfully"
       redirect_to post_path(@post)
@@ -33,13 +33,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+
   end
 
 
   private
 
     def post_params
-      params.require(:post).permit(:title, :summary, :description, :picture)
+      params.require(:post).permit(:title, :summary, :description, :picture, category_ids: [])
+    end
+
+    def set_post
+      @post = Post.find(params[:id])
     end
 end

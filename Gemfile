@@ -14,11 +14,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog', '1.23.0'
 
 
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
+  gem 'better_errors'
 end
 
 group :production do

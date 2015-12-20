@@ -4,4 +4,5 @@ Rails.application.routes.draw do
  get 'form', to: 'pages#form'
 
  resources :posts
+ resources :categories, only: [:new, :create, :show]
 end
