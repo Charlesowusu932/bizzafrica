@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root 'pages#home'
+ root 'posts#index'
  get 'writer', to: 'pages#writer'
  get 'form', to: 'pages#form'
 
